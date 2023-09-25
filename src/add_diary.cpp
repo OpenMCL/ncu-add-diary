@@ -53,12 +53,12 @@ int main()
     ordered_json single_junior_student;
     single_junior_student["name"] = "(" + std::to_string(junior_semester) + ")" + junior_name;
     single_junior_student["grade"] = junior_semester;
-    single_junior_student["nickname"] = json::parse("[]");
-    single_junior_student["title"] = json::parse("[]");
+    single_junior_student["nickname"] = json::array();
+    single_junior_student["title"] = json::array();
     single_junior_student["status"] = "";
     single_junior_student["demo"] = single_junior_student["name"];
     single_junior_student["senior"] = "(" + std::to_string(senior_semester) + ")" + senior_name;
-    single_junior_student["junior"] = json::parse("[]");
+    single_junior_student["junior"] = json::array();
     single_junior_student["width"] = 0;
 
     total_family_data["data"].push_back(std::move(single_junior_student));
