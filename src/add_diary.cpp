@@ -105,6 +105,7 @@ int main()
    *
    */
 
+  // generate the json for every junior student
   ordered_json total_search_data = ordered_json::parse("{\"data\":[]}");
   for (const auto &student : total_family_data["data"]) {
     if (student["grade"] != junior_semester)
@@ -127,6 +128,7 @@ int main()
   ordered_json old_search_data = ordered_json::parse(old_search);
   old_search.close();
 
+  // append the old student to total_search_data
   for (const auto &student : old_search_data["data"])
     total_search_data["data"].push_back(std::move(student));
 
