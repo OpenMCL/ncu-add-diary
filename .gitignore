@@ -1,0 +1,5 @@
+*.json
+build
+family_data
+family_data_backup
+.vscode
